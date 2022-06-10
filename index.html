@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/465132a43c.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>ANURAG CHAUHAN</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* *********** same property *********/
+        h1 {
+            color: orangered;
+        }
+
+        span {
+            color: #fff;
+        }
+
+        BUtton {
+            background-color: orangered;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        section {
+            width: 100%;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        section span {
+            color: black;
+        }
+
+        section img {
+            margin: 15px 0;
+        }
+
+
+
+
+        /* *****************  first_page************* */
+
+        .navContainer {
+            width: 100%;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .first_page {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./images/first\ page.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .first_page::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #0d0d1a;
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 5px
+        }
+
+
+
+        .nav {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+
+        .menu_left {
+            width: 40%;
+            z-index: 2;
+        }
+
+        .menu_left h1 {
+            font-weight: bold;
+        }
+
+        .menu_right {
+            width: 60%;
+        }
+
+        .menu_right ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+
+        .menu_right ul li a {
+
+            z-index: 2;
+            position: relative;
+        }
+
+        .menu_right ul li a::before {
+            content: "";
+            transition: all 5s;
+            background-color: orangered;
+            height: 3px;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            z-index: 5;
+        }
+
+        .menu_right ul li a:hover::before {
+            width: 100%;
+        }
+
+        .menu_right ul li a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .home {
+            color: orangered;
+            display: block;
+        }
+
+        .hero_page {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+        }
+
+        .hero_page p {
+            font-weight: 700;
+            color: #fff;
+
+        }
+
+        .hero_page h1 {
+            margin: 20px 0;
+            font-size: 66px;
+
+        }
+
+
+
+
+        /* **************** choose_program_cards ************* */
+
+        .choose_program_cards {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .choose_program_card {
+            width: 48%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .choose_program_card_image {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        .choose_program_card_text {
+            width: 70%;
+        }
+
+        .choose_program_card_text p {
+            margin: 8px 0;
+            line-height: 20px;
+        }
+
+        .choose_program_card_text h3 {
+            color: orangered;
+            font-size: 14px;
+        }
+
+
+        /* *************** member ********* */
+
+        .member {
+            width: 100%;
+            height: 300px;
+            background-image: url(./images/cta-bg.jpg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .member_center {
+            z-index: 2;
+        }
+
+        .member_center h1 {
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .member_center p {
+            margin: 20px 0;
+            line-height: 23px;
+            color: #fff;
+        }
+
+        .member_center button {
+            margin-top: 20px;
+        }
+
+        /* **************** CLASSES************ */
+
+
+        .classes {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .classes_card1 {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .classes_card1_box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 5px 5px 10px rgb(87, 86, 86);
+            padding: 20px;
+            background-color: transparent;
+
+        }
+
+        .classes_card1_box:nth-child(5) {
+            box-shadow: none;
+            padding: 0;
+        }
+
+        .view_all_button {
+            width: 100%;
+            font-size: 15px;
+            padding: 20px 0;
+        }
+
+        .classes_card1_box_icon {
+            width: 5%;
+        }
+
+        .classes_card1_box_text {
+            width: 75%;
+        }
+
+        .first_class {
+            color: orangered;
+        }
+
+        .classes_card1_box_icon i {
+            font-size: 25px;
+            color: orangered;
+        }
+
+        .classes_card1_box_text h2 {
+            font-size: 14px;
+        }
+
+        .classes_card2 {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .classes_card2_image {
+            width: 100%;
+        }
+
+        .classes_card2_image img {
+            width: 100%;
+        }
+
+        .classes_card2 h2 {
+            margin-top: 20px;
+        }
+
+        .classes_card2 p {
+            margin: 15px 0;
+        }
+
+
+        /* **********************scheduse_box_______________ */
+
+        .scheduse_box {
+            width: 100%;
+            /* height: 1200px; */
+            padding: 20px;
+            margin-top: 50px;
+            background-image: url(./images/schedule-bg.jpg);
+        }
+
+        .section2 span {
+            color: #fff;
+        }
+
+        .section2 p {
+            color: #fff;
+        }
+
+        .tableContainer {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            /* height: 100vh; */
+            border-collapse: collapse;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            overflow-x: scroll;
+        }
+
+        table td {
+            padding: 30px 60px;
+        }
+
+        table,
+        td,
+        th {
+            border: 2px solid #fff;
+        }
+
+        caption {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .span3 {
+            color: orangered;
+        }
+
+
+        /* ************************ expert_training_box__________________ */
+
+
+        .expert_training_box {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .training_card {
+            width: 300px;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            box-shadow: 5px 5px 10px rgb(87, 86, 86);
+            padding: 25px;
+        }
+
+        .training_card_image {
+            width: 100%;
+            height: 50%;
+        }
+
+        .training_card_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .training_card_text {
+            width: 100%;
+            height: 40%;
+        }
+
+        .training_card_text h4 {
+            color: orangered;
+            margin-bottom: 10px;
+        }
+
+        .training_card_text p {
+            margin: 8px 0;
+            line-height: 22px;
+        }
+
+        .training_card_text_icon {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 25px;
+        }
+
+
+        /* ************************ footer************ */
+        .footer {
+            margin-top: 50px;
+            width: 100%;
+            height: 500px;
+            display: flex
+        }
+
+        .footer_box1:nth-child(1) {
+            width: 50%;
+        }
+
+        .footer_box1 iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer_box1:nth-child(2) {
+            width: 50%;
+            height: 100%;
+            background-image: url(./images/contact-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .contect_box {
+            width: 75%;
+            height: 80%;
+            /* background-color: #fff; */
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 2;
+        }
+
+        input {
+            padding: 50px 5px;
+            width: 50%;
+            background-color: transparent;
+        }
+
+        .cotect_button {
+            width: 50%;
+        }
+
+        /* footer_bottum */
+        .footer_bottum {
+            background-color: black;
+            color: orangered;
+            padding: 10px 0;
+            letter-spacing: 1px;
+            margin-bottom: 700px;
+        }
+
+        .contect_box input {
+            width: 80%;
+            border: 1px solid #999;
+            padding: 10px 5px;
+            margin-top: 5px;
+            border-radius: 4px;
+
+        }
+
+        .contect_box textarea {
+            width: 80%;
+            margin-top: 20px;
+            background-color: transparent;
+        }
+
+        /* (((((((((((((((((((((((((((((( max width   815))))))))))))))))))))))))) */
+
+
+        @media only screen and (max-width: 815px) {
+
+
+            /* first_page */
+
+            .menu_left {
+                width: 40%;
+                z-index: 2;
+            }
+
+            .menu_left h1 {
+                font-size: 25px;
+            }
+
+            .menu_right {
+                width: 65%;
+            }
+
+            .menu_right ul li a {
+                font-size: 12px;
+            }
+
+            .hero_page h1 {
+                margin: 20px 0;
+                font-size: 50px;
+
+            }
+
+            /* **************** choose_program_cards ************* */
+
+            .choose_program_card {
+                width: 50%;
+            }
+
+            .choose_program_card_image {
+                width: 70px;
+                height: 70px;
+            }
+
+            .choose_program_card_text {
+                width: 70%;
+            }
+
+            .choose_program_card_text p {
+                margin: 2px 0;
+                line-height: 17px;
+            }
+
+            /* **************** CLASSES************ */
+
+            /* **********************scheduse_box_______________ */
+
+
+            .classes_card1 {
+                width: 40%;
+            }
+
+            .classes_card2 {
+                width: 55%;
+            }
+
+            .classes_card2 p {
+                margin: 8px 0;
+            }
+
+            /* ************************ expert_training_box__________________ */
+
+            .expert_training_box {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+            }
+
+            .training_card:nth-child(3) {
+                margin-top: 50px;
+            }
+
+            /* footer_bottum */
+            .footer_bottum {
+                font-size: 12px;
+
+            }
+
+            .cotect_button {
+                font-size: 10px;
+                margin-top: 10px;
+            }
+
+            .footer {
+                height: 400px;
+
+            }
+
+
+        }
+
+        /* *******************************(max-width: 631px)******************* */
+
+
+        @media only screen and (max-width: 630px) {
+
+            /* *****************  first_page************* */
+
+            .first_page {
+                width: 100%;
+                height: 100vh;
+
+            }
+
+            .menu_left {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .menu_left h1 {
+                font-weight: bold;
+                font-size: 35px;
+            }
+
+            .menu_right {
+
+                display: none;
+            }
+
+            .hero_page h1 {
+                margin: 25px 0;
+                font-size: 35px;
+
+            }
+
+            /* **************** choose_program_cards ************* */
+
+            .choose_program_card {
+                width: 100%;
+
+            }
+
+            .choose_program_card_image {
+                width: 80px;
+                height: 80px;
+
+            }
+
+            .choose_program_card_text {
+                width: 72%;
+            }
+
+            .choose_program_card_text p {
+
+                line-height: 18px;
+            }
+
+            /* *************** member ********* */
+
+            .member_center h1 {
+
+                font-size: 25px;
+            }
+
+            .member_center p {
+                margin: 17px 0;
+                line-height: 21px;
+                color: #fff;
+                font-size: 15px;
+            }
+
+            .member_center button {
+                margin-top: 25px;
+            }
+
+            /* **************** CLASSES************ */
+
+
+            .classes {
+                flex-wrap: wrap;
+            }
+
+            .classes_card1 {
+                width: 100%;
+            }
+
+            .classes_card1_box {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .classes_card2 {
+                width: 100%;
+                margin-top: 50px
+            }
+
+            /* **********************scheduse_box_______________ */
+
+
+
+            .section2 p {
+                font-size: 15px;
+            }
+
+            table {
+                /* height: 70vh; */
+                color: #fff;
+            }
+
+            caption {
+                font-size: 17px;
+            }
+
+            .span3 {
+                color: orangered;
+            }
+
+            section {
+
+                font-size: 15px;
+            }
+
+            /* ************************ expert_training_box__________________ */
+
+            .training_card {
+                margin-top: 50px;
+            }
+
+            .expert_training_box {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+            }
+
+
+            /* ************************ footer************ */
+            .footer {
+                height: 300px;
+                flex-wrap: wrap;
+            }
+
+            .footer_box1:nth-child(1) {
+                width: 100%;
+                height: 250px;
+            }
+
+            .footer_box1 iframe {
+                width: 100%;
+                height: 250px;
+            }
+
+            .footer_box1:nth-child(2) {
+                width: 100%;
+                height: 100%;
+
+            }
+
+
+
+        }
+
+        @media only screen and (max-width: 320px) {
+
+            /* *****************  first_page************* */
+
+
+            .menu_left h1 {
+                font-size: 30px;
+            }
+
+            .hero_page h1 {
+                margin: 20px 0;
+                font-size: 35px;
+
+            }
+
+            /* **************** choose_program_cards ************* */
+
+
+            .choose_program_card_text {
+                width: 72%;
+                font-size: 15px;
+            }
+
+            /* *************** member ********* */
+
+            .member_center h1 {
+
+                font-size: 20px;
+            }
+
+            .member_center p {
+                margin: 10px 0;
+                line-height: 19px;
+                font-size: 15px;
+            }
+
+            .member_center button {
+                margin-top: 20px;
+            }
+
+            /* **************** CLASSES************ */
+
+
+            .classes {
+                flex-wrap: wrap;
+            }
+
+            .classes_card1 {
+                width: 100%;
+            }
+
+            .classes_card1_box {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .classes_card2 {
+                width: 100%;
+                margin-top: 50px
+            }
+
+            /* **********************scheduse_box_______________ */
+            table {
+                /* height: 60vh; */
+                color: #fff;
+            }
+
+            table td {
+                font-size: 15px;
+            }
+
+            caption {
+                font-size: 15px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ****************  first_page************** -->
+
+    <div class="first_page " id="home">
+
+        <div class="navContainer">
+            <div class="container">
+
+                <div class="nav">
+                    <div class="menu_left">
+                        <h1><span>TRAINING </span>STUDIO</h1>
+                    </div>
+                    <div class="menu_right">
+                        <ul>
+                            <li><a href="#home" class="home">HOME</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#class">CLASSES</a></li>
+                            <li><a href="#schudel">SCHEDULES</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                            <li><a href=""><BUtton>SIGN UP</BUtton></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container">
+        <div class="hero_page">
+            <p>WORK HARDER, GET STRONGER</p>
+            <h1><span>EASY WITH OUR </span>GYM</h1>
+            <button>BECOME A MEMBER</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- **************** choose_program_card******************** -->
+
+    <div id="about" class="container" style="overflow: hidden">
+        <section>
+            <h1 data-aos="fade-up" data-aos-duration="1000"><span>CHOOSE</span> PROGRAM</h1>
+            <img data-aos="slide-right" data-aos-duration="1000" src="./images/line-dec.png" alt="">
+            <p data-aos="slide-left" data-aos-duration="1000">Training studio is froo css tamplate for gyms and fitnoss
+                cootor You are <br><br> allword to use this
+                your businoss website</p>
+        </section>
+        <div class="choose_program_cards">
+            <div class="choose_program_card" data-aos="fade-right">
+                <div class="choose_program_card_image">
+                    <img src="./images/tabs-first-icon.png" alt="">
+                </div>
+                <div class="choose_program_card_text">
+                    <h2>Basic Bitness</h2>
+                    <p>The concept of training to in world of bodybuilding during the past
+                        few years</p>
+                    <h3>DESCOVER MORE</h3>
+                </div>
+            </div>
+            <div class="choose_program_card" data-aos="fade-left">
+                <div class="choose_program_card_image">
+                    <img src="./images/tabs-first-icon.png" alt="">
+                </div>
+                <div class="choose_program_card_text">
+                    <h2>Basic Bitness</h2>
+                    <p>The concept of training to in world of bodybuilding during the past
+                        few years</p>
+                    <h3>DESCOVER MORE</h3>
+                </div>
+            </div>
+            <div class="choose_program_card" data-aos="fade-right">
+                <div class="choose_program_card_image">
+                    <img src="./images/tabs-first-icon.png" alt="">
+                </div>
+                <div class="choose_program_card_text">
+                    <h2>Basic Bitness</h2>
+                    <p>The concept of training to in world of bodybuilding during the past
+                        few years</p>
+                    <h3>DESCOVER MORE</h3>
+                </div>
+            </div>
+            <div class="choose_program_card " data-aos="fade-left">
+                <div class="choose_program_card_image">
+                    <img src="./images/tabs-first-icon.png" alt="">
+                </div>
+                <div class="choose_program_card_text">
+                    <h2>Basic Bitness</h2>
+                    <p>The concept of training to in world of bodybuilding during the past
+                        few years</p>
+                    <h3>DESCOVER MORE</h3>
+                </div>
+            </div>
+            <div class="choose_program_card" data-aos="fade-right">
+                <div class="choose_program_card_image">
+                    <img src="./images/tabs-first-icon.png" alt="">
+                </div>
+                <div class="choose_program_card_text">
+                    <h2>Basic Bitness</h2>
+                    <p>The concept of training to in world of bodybuilding during the past
+                        few years</p>
+                    <h3>DESCOVER MORE</h3>
+                </div>
+            </div>
+            <div class="choose_program_card" data-aos="fade-left">
+                <div class="choose_program_card_image">
+                    <img src="./images/tabs-first-icon.png" alt="">
+                </div>
+                <div class="choose_program_card_text">
+                    <h2>Basic Bitness</h2>
+                    <p>The concept of training to in world of bodybuilding during the past
+                        few years</p>
+                    <h3>DESCOVER MORE</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ********************* member********** -->
+
+    <div class="member">
+        <div class="container">
+            <div class="member_center" data-aos="fade-up" data-aos-duration="1000">
+                <h1><span>DON'T </span>THINK,<span> BEGIN</span> TODAY</h1>
+                <p>There have been some articles that I have discovered recently that suggest training just <br> shy of
+                    failure. These articles were written by seasoned </p>
+                <button>BECOME A MEMBER</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ********************CLASSES************** -->
+
+    <div class="container" id='class' style="overflow: hidden;">
+        <section>
+            <h1 data-aos="fade-up" data-aos-duration="1000"><span>OUR</span> CLASSES</h1>
+            <img data-aos="slide-right" data-aos-duration="1000" src="./images/line-dec.png" alt="">
+            <p data-aos="slide-left" data-aos-duration="1000">This would basically require that the trainee perform
+                until he fails, so that he <br><br> that the
+                trainee perform until will know his
+                limitations. </p>
+        </section>
+    </div>
+    <div class="container" data-aos-offset="250">
+        <div class="classes">
+            <div class="classes_card1" data-aos="fade-down" data-aos-duration="1500">
+                <div class="classes_card1_box">
+                    <div class="classes_card1_box_icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="classes_card1_box_text">
+                        <h2 class="first_class">Frist Training Class</h2>
+                    </div>
+                </div>
+
+
+                <div class="classes_card1_box">
+                    <div class="classes_card1_box_icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="classes_card1_box_text">
+                        <h2>Second Training Class</h2>
+                    </div>
+                </div>
+
+
+                <div class="classes_card1_box">
+                    <div class="classes_card1_box_icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="classes_card1_box_text">
+                        <h2>Third Training Class</h2>
+                    </div>
+                </div>
+
+
+                <div class="classes_card1_box">
+                    <div class="classes_card1_box_icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="classes_card1_box_text">
+                        <h2>Fourth Training Class</h2>
+                    </div>
+                </div>
+
+
+                <div class="classes_card1_box">
+                    <button class="view_all_button">View ALL Schedules</button>
+                </div>
+            </div>
+            <div class="classes_card2">
+                <div class="classes_card2_image">
+                    <img src="./images/training-image-01.jpg" alt="">
+                </div>
+                <div class="classes_card2_text">
+                    <h2>Frist Training Class</h2>
+                    <p>For a person who is not advancing in their bodybuilding regimen, these suggestions are worth
+                        Exercising to failure may hurt recovery and eventually damage your progress. looking into even
+                        though they may not agree with accepted practices.</p>
+                    <button>VIEW SCHEDULE</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ************** scheduse*************** -->
+
+    <div class="scheduse_box" id='schudel'>
+        <div class="container" style="overflow: hidden;">
+            <section class="section2">
+                <h1 data-aos="fade-up" data-aos-duration="1000"><span>CLASSES</span> SCHEDUSE</h1>
+                <img data-aos="slide-right" data-aos-duration="1000" src="./images/line-dec.png" alt="">
+                <p data-aos="slide-left" data-aos-duration="1000">Training studio is froo css tamplate for gyms and
+                    fitnoss cootor You are <br><br> allword to use this
+                    your businoss website</p>
+            </section>
+        </div>
+
+        <div class="container tableContainer">
+            <table>
+                <caption><span class="span3">Monday</span> / Tuesday / wdnesday / Thurday / Friday</caption>
+                <tr>
+                    <td>fitness class</td>
+                    <td>10:00AM-11:00AM</td>
+                    <td></td>
+                    <td>shiavm chauhan</td>
+                </tr>
+                <tr>
+                    <td>muscle training</td>
+                    <td></td>
+                    <td></td>
+                    <td>aadi chuahan</td>
+                </tr>
+                <tr>
+                    <td>body building</td>
+                    <td></td>
+                    <td>1:00AM-2:00AM</td>
+                    <td>akshay chauhan</td>
+                </tr>
+                <tr>
+                    <td>yoga training</td>
+                    <td></td>
+                    <td></td>
+                    <td>anurag chuahan</td>
+                </tr>
+                <tr>
+                    <td>advansed class</td>
+                    <td>10:00AM-11:00AM</td>
+                    <td></td>
+                    <td>shanu chuahan</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- *********************training card*********** -->
+
+    <div class="container " style="overflow: hidden;">
+        <section>
+            <h1 data-aos="fade-up" data-aos-duration="1000"><span>EXPERT</span> TRAINING</h1>
+            <img data-aos="slide-right" data-aos-duration="1000" src="./images/line-dec.png" alt="">
+            <p data-aos="slide-left" data-aos-duration="1000">Training studio is froo css tamplate for gyms and fitnoss
+                cootor You are <br><br>
+                allword to use this
+                your businoss website</p>
+        </section>
+    </div>
+    <div class="container">
+        <div class="expert_training_box" style="overflow: hidden;">
+            <div class="training_card" data-aos="slide-right" data-aos-duration="1000">
+                <div class="training_card_image">
+                    <img src="./images/first-trainer.jpg" alt="">
+                </div>
+                <div class="training_card_text">
+                    <h4>Strongth Trainer</h4>
+                    <h2>Anurag Chauhan</h2>
+                    <p>For a person who is not advancing in their bodybuilding regimen, these suggestions are worth
+                        looking </p>
+                    <div class="training_card_text_icon">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-invision"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="training_card" data-aos="fade-down" data-aos-duration="1000">
+                <div class="training_card_image">
+                    <img src="./images/second-trainer.jpg" alt="">
+                </div>
+                <div class="training_card_text">
+                    <h4>Muscle Trainer</h4>
+                    <h2>Rahul Chauhan</h2>
+                    <p>For a person who is not advancing in their bodybuilding regimen, these suggestions are worth
+                        looking </p>
+                    <div class="training_card_text_icon">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-invision"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="training_card" data-aos="slide-left" data-aos-duration="1000">
+                <div class="training_card_image">
+                    <img src="./images/third-trainer.jpg" alt="">
+                </div>
+                <div class="training_card_text">
+                    <h4>Power Trainer</h4>
+                    <h2>Akshay Chuahan</h2>
+                    <p>For a person who is not advancing in their bodybuilding regimen, these suggestions are worth
+                        looking </p>
+                    <div class="training_card_text_icon">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-invision"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ************************** footer************************* -->
+    <div class="container">
+        <div class="footer" id='contact' style="overflow: hidden;">
+            <div class="footer_box1">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d112064.38490368043!2d77.217792!3d28.629401600000037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1639379504490!5m2!1sen!2sin"
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="footer_box1">
+                <div class="contect_box">
+                    <input type="text" name="" id="" placeholder="Your Name*">
+                    <input type="email" name="" id="" placeholder="Your Email*">
+                    <input type="text" name="" id="" placeholder="Subject">
+
+                    <textarea name="" id="" rows="4" cols="8" placeholder="Messages"></textarea>
+
+                    <button class="cotect_button">SEND MESSAGES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- **************************** footer_bottum ***************-->
+    <!-- 
+    <div class="footer_bottum">
+        <div class="container">
+            <h2>anuragchauhan2012@gmail.com</h2>
+        </div>
+    </div> -->
+
+    <script>
+        AOS.init({
+            offset: 120,
+        });
+    </script>
+
+</body>
+
+</html>
